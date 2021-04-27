@@ -1,0 +1,85 @@
+.primary-btn {
+  color: $white;
+  background: $blue-color 0% 0% no-repeat padding-box;
+  border-radius: 2px;
+  opacity: 1;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+}
+.transparent-btn {
+  color: $blue-color;
+  font-size: 16px;
+  line-height: 21px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+button:disabled,
+button[disabled] {
+  color: $black;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.default-btn {
+  outline: none;
+  border: 1px solid $border-dark;
+  border-radius: 2px;
+  background: transparent;
+  padding: 2px 5px;
+  line-height: 14px;
+  cursor: pointer;
+  color: $para-color;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.radio-buttons-wrapper {
+  clear: both;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-button {
+  position: absolute;
+  left: -9999em;
+  top: -9999em;
+
+  & + label {
+    float: left;
+    width: 100%;
+    padding: 7px 20px !important;
+    cursor: pointer;
+    border: 1px solid $blue-color !important;
+    color: $blue-color !important;
+    background-color: $blue-color;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    border: 1px solid $blue-color;
+    background: transparent;
+
+    &:first-of-type {
+      border-radius: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &:last-of-type {
+      border-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+  &:checked + label {
+    background-color: $blue-color;
+    color: $white !important;
+  }
+}

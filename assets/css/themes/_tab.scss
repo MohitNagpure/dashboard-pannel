@@ -1,0 +1,296 @@
+/*top-header-tab*/
+.tabset {
+  > input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+  }
+  .tab-panel {
+    display: none;
+  }
+  > input {
+    &:first-child {
+      &:checked {
+        ~ {
+          .tab-panels {
+            > .tab-panel {
+              &:first-child {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:checked {
+        ~ {
+          .tab-panels {
+            > .tab-panel {
+              &:nth-child(2) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(5) {
+      &:checked {
+        ~ {
+          .tab-panels {
+            > .tab-panel {
+              &:nth-child(3) {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &:focus {
+      + {
+        label {
+          color: $blue-color;
+          &::after {
+            background: $blue-color;
+          }
+        }
+      }
+    }
+    &:checked {
+      + {
+        label {
+          &::after {
+            background: $blue-color;
+          }
+          border-color: $border-color;
+          border-bottom: 1px solid $white;
+          margin-bottom: -1px;
+          border-top: 2px solid $blue-color;
+          color: $blue-color;
+        }
+      }
+    }
+  }
+  > label {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    cursor: pointer;
+    font-weight: 700;
+    color: $para-color;
+    //   transition: ease 0.3s;
+    &:hover {
+      color: $blue-color;
+      &::after {
+        background: $blue-color;
+      }
+    }
+  }
+  max-width: 65em;
+}
+.tab-panel {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+  .tab-content {
+    display: flex;
+    position: relative;
+    .param-area {
+      padding: 10px 20px;
+      border: 1px solid $border-color;
+      .para-item {
+        list-style: none;
+        li {
+          position: relative;
+          margin: 0;
+          padding: 0;
+          a {
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            color: $para-color;
+            white-space: nowrap;
+            z-index: 2;
+            font-size: 15px;
+            text-align: left;
+          }
+          &.active {
+            @extend .item-hover;
+            a {
+              color: $blue-color;
+              font-weight: 700;
+            }
+          }
+          &:hover {
+            @extend .item-hover;
+          }
+        }
+      }
+    }
+  }
+}
+/*end-header-tab*/
+
+/*inner-tab*/
+.inner-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  width: 70%;
+  margin: 0 10px;
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin-right: 1.2rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-weight: bold;
+    .label-radio {
+      display: block !important;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+  .tab {
+    order: 9;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: $white;
+    padding: 20px 0;
+    border: 1px solid $border-color;
+    .tab-head {
+      display: flex;
+      padding: 0;
+      background: $bg-color 0% 0% no-repeat padding-box;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+    }
+    .divider {
+      position: relative;
+      display: flex;
+      grid-gap: 1vw;
+      .left-divider {
+        width: 50%;
+        border-right: 1px solid $border-color;
+        padding: 10px 10px;
+      }
+      .right-divider {
+        // width: 50%;
+        padding: 15px 10px;
+        margin: 0;
+      }
+      .checklist-contnet {
+        min-height: 35vh;
+        margin-top: 15px;
+        .head {
+          border-bottom: 1px solid $border-color;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+        }
+        .form-group {
+          margin: 5px 0;
+          label {
+          }
+          ul li {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            grid-gap: 6vw;
+            a {
+              position: relative;
+              display: block;
+              padding: 10px 20px;
+              color: $para-color;
+              white-space: nowrap;
+              z-index: 2;
+              font-size: 15px;
+              text-align: left;
+              &.remove {
+                color: $danger-color;
+              }
+            }
+            &.active {
+              background: #eff3f9 0% 0% no-repeat padding-box;
+              border-radius: 5px;
+            }
+            &:hover {
+              background: #eff3f9 0% 0% no-repeat padding-box;
+              opacity: 0.8;
+            }
+          }
+        }
+        input[type="checkbox"] {
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
+        }
+        .fill-checkbox {
+        }
+        label {
+          display: inline-block;
+          padding: 0 5px;
+          color: $item-color;
+          font-size: 15px;
+          line-height: 21px;
+          font-weight: 600;
+        }
+      }
+      .search-bottom {
+        position: relative;
+        input[type="text"] {
+          outline: none;
+          background: $white;
+          position: absolute;
+          left: -5px;
+          width: 100%;
+          margin: 0;
+          color: $para-color;
+          padding: 10px 0 10px 10px;
+          border: 1px solid $box-border;
+          display: inline-block;
+          font-size: 15px;
+        }
+        .search-ico {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          vertical-align: text-top;
+          border: none;
+          outline: none;
+          top: 10px;
+          right: 10px;
+          position: absolute;
+        }
+      }
+    }
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked {
+      + {
+        label {
+          border-color: $border-color;
+          border-bottom: 1px solid $white;
+          margin-bottom: -1px;
+          border-top: 2px solid $blue-color;
+          color: $blue-color;
+          position: relative;
+          + {
+            .tab {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
