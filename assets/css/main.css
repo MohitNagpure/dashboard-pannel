@@ -434,6 +434,7 @@ button[disabled] {
   margin-bottom: 0 !important;
   border: 1px solid #006bb4;
   background: transparent;
+  font-weight: 600 !important;
 }
 
 .radio-button + label:first-of-type {
