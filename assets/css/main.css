@@ -152,7 +152,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  padding: 0 1.5rem 0 0;
+  padding: 0 5px 0 0;
 }
 
 .right-content .page-header-content .head-right .help {
