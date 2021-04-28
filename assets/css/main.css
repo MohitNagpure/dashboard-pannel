@@ -635,7 +635,7 @@ button[disabled] {
 }
 
 .inner-tabs .tab .divider .checklist-contnet {
-  min-height: 35vh;
+  min-height: 30vh;
   margin-top: 15px;
 }
 
