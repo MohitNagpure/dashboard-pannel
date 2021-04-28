@@ -20,21 +20,20 @@ a {
   text-decoration: none;
 }
 
-.item-hover, .sidebar-menu .menu ul li.active, .sidebar-menu .menu ul li:hover, .right-content .inner-block .left-iteam-container .list-items ul li.active, .right-content .inner-block .left-iteam-container .list-items ul li:hover, .right-content .inner-block .right-pannel .app-page-title .page-title-wrapper .page-title-action .dropdown .dropdown-menu li:hover, .tab-panel .tab-content .param-area .para-item li.active, .tab-panel .tab-content .param-area .para-item li:hover {
-  background: #f9efef 0% 0% no-repeat padding-box;
+.item-hover, .sidebar-menu .menu ul li:hover, .right-content .inner-block .left-iteam-container .list-items ul li:hover, .right-content .inner-block .right-pannel .app-page-title .page-title-wrapper .page-title-action .dropdown .dropdown-menu li:hover, .tab-panel .tab-content .param-area .para-item li:hover {
+  background: #eff3f9 0% 0% no-repeat padding-box;
   opacity: 0.8;
   border-radius: 5px;
 }
 
-.item-hover a, .sidebar-menu .menu ul li.active a, .sidebar-menu .menu ul li:hover a, .right-content .inner-block .left-iteam-container .list-items ul li.active a, .right-content .inner-block .left-iteam-container .list-items ul li:hover a, .right-content .inner-block .right-pannel .app-page-title .page-title-wrapper .page-title-action .dropdown .dropdown-menu li:hover a, .tab-panel .tab-content .param-area .para-item li.active a, .tab-panel .tab-content .param-area .para-item li:hover a {
-  color: #006bb4;
+.item-hover a, .sidebar-menu .menu ul li:hover a, .right-content .inner-block .left-iteam-container .list-items ul li:hover a, .right-content .inner-block .right-pannel .app-page-title .page-title-wrapper .page-title-action .dropdown .dropdown-menu li:hover a, .tab-panel .tab-content .param-area .para-item li:hover a {
   opacity: 1;
   -webkit-transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
   transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 .title-text {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 24px;
   font-weight: 700;
   color: #191919;
@@ -75,6 +74,10 @@ a {
   z-index: 2;
   font-size: 15px;
   text-align: left;
+}
+
+.sidebar-menu .menu ul li.active {
+  background: #f9efef 0% 0% no-repeat padding-box;
 }
 
 .sidebar-menu .menu ul li.active a {
@@ -264,6 +267,10 @@ a {
 .right-content .inner-block .left-iteam-container .list-items ul li a img {
   vertical-align: middle;
   margin-right: 5px;
+}
+
+.right-content .inner-block .left-iteam-container .list-items ul li.active {
+  background: #f9efef 0% 0% no-repeat padding-box;
 }
 
 .right-content .inner-block .left-iteam-container .list-items ul li.active a {
@@ -547,6 +554,10 @@ button[disabled] {
   z-index: 2;
   font-size: 15px;
   text-align: left;
+}
+
+.tab-panel .tab-content .param-area .para-item li.active {
+  background: #f9efef 0% 0% no-repeat padding-box;
 }
 
 .tab-panel .tab-content .param-area .para-item li.active a {

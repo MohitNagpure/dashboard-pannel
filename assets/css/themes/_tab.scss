@@ -118,7 +118,7 @@
             text-align: left;
           }
           &.active {
-            @extend .item-hover;
+            background: $active-color 0% 0% no-repeat padding-box;
             a {
               color: $blue-color;
               font-weight: 700;
